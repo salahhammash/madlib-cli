@@ -5,13 +5,9 @@ welcome to new Madlib Game
 Be ready to play
 ''')
 def read_template(path):
-    try:
-       test1=open(path)
-       return test1.read()
-    except FileNotFoundError as err:
-        print('file is not found pls change the path !')
-        print(err)
-
+    with open(path) as f:
+        return f.read().strip()
+    
 
 def parse_template(text):
     actual_stripped=''
@@ -60,9 +56,9 @@ def start_game(file_toRead_game,file_toWrite_game):
     print(f"this is the story you wrote it \n{result}")
     create_file(result,file_toWrite_game)
 
-
+ 
 
     
   
 if __name__=="__main__":
-    start_game("assets/madlib_game_file.txt","assets/output_game.txt")
+    start_game("assets/dark_and_stormy_night_template.txt","assets/output_game.txt")
