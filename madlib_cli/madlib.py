@@ -35,6 +35,7 @@ def parse_template(text):
     
  
 def merge(text,tep): # this func take evrey index of a tuple and add it to the txt where he find {}
+   
     return text.format(*tep)
 
 # this write inside my file  that founded assets/output_game.txt
@@ -61,4 +62,4 @@ def start_game(file_toRead_game,file_toWrite_game):
     
   
 if __name__=="__main__":
-    start_game("assets/dark_and_stormy_night_template.txt","assets/output_game.txt")
+    start_game("assets/madlib_game_file.txt","assets/output_game.txt")
